@@ -11,11 +11,14 @@ function Footer() {
         <footer className="footer-distributed">
             <div className="footer-left">
                 <h3>Company<span>logo</span></h3>
-                <p className="footer-links">
+                {/* <p className="footer-links">
+                    <NavLink to="/" className="link-1">Home</NavLink>
                     <NavLink to="/" className="link-1">Home</NavLink>
                     <NavLink to="/About">About</NavLink>
-                </p>
-                <p className="footer-company-name">Company Name © 2015</p>
+                    <NavLink to="/About">About</NavLink>
+                </p> */}
+                <br />
+                <p className="footer-company-name">Company Name © 2022</p>
             </div>
             <div className="footer-center">
                 <div>
@@ -37,8 +40,8 @@ function Footer() {
                     <a target="_blank" rel="noreferrer" href={"https://www.facebook.com/ahmadkharissa"}><i className="bi bi-facebook"></i></a>
                     <a target="_blank" rel="noreferrer" href={"https://www.instagram.com/ahmadkharissa/"}><i className="bi bi-instagram"></i></a>
                     <a target="_blank" rel="noreferrer" href={"https://twitter.com/ahmadkharissa"}><i className="bi bi-twitter"></i></a>
-                    <NavLink to="/"><i className="bi bi-linkedin"></i></NavLink>
-                    <NavLink to="/"><i className="bi bi-github"></i></NavLink>
+                    <a target="_blank" rel="noreferrer" href={"https://www.linkedin.com/in/ahmadkharissa"}><i className="bi bi-linkedin"></i></a>
+                    <a target="_blank" rel="noreferrer" href={"https://github.com/ahmadkharissa"}><i className="bi bi-github"></i></a>
                 </div>
             </div>
         </footer>

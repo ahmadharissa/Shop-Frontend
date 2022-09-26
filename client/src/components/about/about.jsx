@@ -13,8 +13,7 @@ function About() {
                 <p>Some text about who we are and what we do.</p>
                 <p>Resize the browser window to see that this page is responsive by the way.</p>
             </div>
-            <h2 style={{ textAlign: "center" }}>About me</h2>
-            <div className="card" style={{ borderRadius: "1.25rem" }}>
+            <div className="card" style={{ borderRadius: "1.25rem", marginTop: "1rem" }}>
                 <img src={Developer} alt="harissa" style={{ width: "100%" }} />
                 <h1>Ahmad Harissa</h1>
                 <p className="title">Web Developer</p>
@@ -25,7 +24,6 @@ function About() {
                     <a target="_blank" rel="noreferrer" href={"https://www.instagram.com/ahmadkharissa/"}><i className="bi bi-instagram"></i></a>
                     <a target="_blank" rel="noreferrer" href={"https://twitter.com/ahmadkharissa"}><i className="bi bi-twitter"></i></a>
                 </div>
-                <button className="contact">Contact</button>
             </div>
         </div>
     )

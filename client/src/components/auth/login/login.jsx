@@ -26,7 +26,7 @@ function Login() {
 
   const handelChangeEmail = (e) => {
     e.preventDefault()
-    setEmail(e.target.value)
+    setEmail(e.target.value.trim())
   }
 
   const handelChangePassword = (e) => {
@@ -37,7 +37,7 @@ function Login() {
   const handelClickForgetPassword = (e) => {
     e.preventDefault()
     const enter = window.prompt("Enter Email")
-    dispatch(forgetPassword(enter))
+    dispatch(forgetPassword(enter.trim()))
   }
 
   useEffect(() => {

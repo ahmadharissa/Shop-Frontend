@@ -30,17 +30,17 @@ function Signup() {
 
     const handelChangeFName = (e) => {
         e.preventDefault()
-        setFirstName(e.target.value)
+        setFirstName(e.target.value.trim())
     }
 
     const handelChangeLName = (e) => {
         e.preventDefault()
-        setLastName(e.target.value)
+        setLastName(e.target.value.trim())
     }
 
     const handelChangeEmail = (e) => {
         e.preventDefault()
-        setEmail(e.target.value)
+        setEmail(e.target.value.trim())
     }
 
     const handelChangePhone = (e) => {
