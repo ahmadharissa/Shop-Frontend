@@ -17,6 +17,10 @@ const Card = props => {
         navigate(`/Category/${props.id}`)
     }
 
+    const handelClickSubCategory = () => {
+        navigate(`/SubCategory/${props.id}`)
+    }
+
     const handelClickAddToCart = async () => {
         if (isAuthenticated) {
             dispatch(addToWishlist(props.id))
@@ -32,7 +36,7 @@ const Card = props => {
     }
 
     let img = <></>
-    let content = <div className="card-body" style={{ display: "flex", justifyContent: "center", alignItems: "center", cursor: 'pointer' }} onClick={handelClickCategory}>
+    let content = <div className="card-body" style={{ display: "flex", justifyContent: "center", alignItems: "center", cursor: 'pointer' }} onClick={props.isSubCategory? handelClickSubCategory : handelClickCategory}>
         <h4>{props.name}</h4>
     </div>
     let cartButton = <></>

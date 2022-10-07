@@ -7,11 +7,12 @@ import jwtDecode from 'jwt-decode';
 //components
 import Header from './components/header/header';
 import Home from './components/home/home';
-import Product from './components/category/product/product';
+import Product from './components/category/subCategory/product/product';
 import Cart from './components/cart/cart.jsx';
 import Login from './components/auth/login/login';
 import Signup from './components/auth/signup/signup';
 import Category from './components/category/category';
+import SubCategory from './components/category/subCategory/subCategory';
 import Profile from './components/profile/profile';
 import Footer from '../src/components/footer/footer';
 import About from './components/about/about';
@@ -53,7 +54,8 @@ function App() {
         <Routes>
           <Route path='/' exact element={<Home />} />
           <Route path='/Category' exact element={<Category />} />
-          <Route path='/Category/:id' exact element={<Product />} />
+          <Route path='/Category/:id' exact element={<SubCategory />} />
+          <Route path='/SubCategory/:id' exact element={<Product />} />
           <Route path='/About' exact element={<About />} />
           <Route path='/Cart' exact element={<Cart />} />
           <Route path='/Login' exact element={<Login />} />
