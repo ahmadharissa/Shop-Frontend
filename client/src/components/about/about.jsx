@@ -15,7 +15,7 @@ function About() {
             </div>
             <div className="card" style={{ borderRadius: "1.25rem", marginTop: "1rem" }}>
                 <img src={Developer} alt="harissa" style={{ width: "100%" }} />
-                <h1>Ahmad Harissa</h1>
+                <h1 style={{ fontSize: '2rem', fontWeight: "bold", fontStyle: 'italic' }}>Ahmad Harissa</h1>
                 <p className="title">Web Developer</p>
                 <p>Some text that describes me lorem ipsum ipsum lorem.</p>
                 <p>ahmadharissa25@gmail.com</p>
