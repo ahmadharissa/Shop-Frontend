@@ -10,7 +10,7 @@ import { getCategories } from "../../redux/category/categoryAction";
 
 function Category() {
     const dispatch = useDispatch();
-    const { items } = useSelector((state) => state.categories)
+    const { items, loading } = useSelector((state) => state.categories)
 
     useEffect(() => {
         dispatch(getCategories());
@@ -26,7 +26,11 @@ function Category() {
     return (
         <div className="container">
             <div className="row">
-                {categories}
+                {loading ? (
+                    <p style={{textAlign: 'center'}}>Loading</p>
+                ) : (
+                    categories
+                )}
             </div>
         </div>
     )

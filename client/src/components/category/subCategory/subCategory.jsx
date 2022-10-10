@@ -11,14 +11,14 @@ import { getCategory } from "../../../redux/category/categoryAction";
 function SubCategory() {
     const dispatch = useDispatch();
     const { id } = useParams();
-    const category = useSelector((state) => state.categories.item);
+    const { item, loading } = useSelector((state) => state.categories);
     let subCategory;
 
     useEffect(() => {
         dispatch(getCategory(id));
     }, []);
 
-    subCategory = category?.subCategory?.map((item) => {
+    subCategory = item?.subCategory?.map((item) => {
         return <Card
             key={item._id}
             id={item._id}
@@ -30,7 +30,11 @@ function SubCategory() {
     return (
         <div className="container">
             <div className="row">
-                {subCategory}
+                {loading ? (
+                    <p style={{ textAlign: 'center' }}>Loading</p>
+                ) : (
+                    subCategory
+                )}
             </div>
         </div>
     )

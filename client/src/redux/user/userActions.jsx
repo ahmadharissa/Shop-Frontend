@@ -4,7 +4,17 @@ import axios from "axios";
 import getData from "../../utils/getData";
 
 //redux
-import { FORGET, FORGET_FAIL, LOGIN_FAIL, LOGIN_REQUEST, LOGIN_SUCCESS, LOGOUT, SIGNUP_FAIL, SIGNUP_REQUEST, SIGNUP_SUCCESS } from "./userTypes";
+import {
+  FORGET,
+  FORGET_FAIL,
+  LOGIN_FAIL,
+  LOGIN_REQUEST,
+  LOGIN_SUCCESS,
+  LOGOUT,
+  SIGNUP_FAIL,
+  SIGNUP_REQUEST,
+  SIGNUP_SUCCESS
+} from "./userTypes";
 
 export const login = (data) => async (dispatch) => {
   var user = {};
@@ -29,7 +39,7 @@ export const signup = (data) => async (dispatch) => {
     localStorage.setItem("token", res.data.token);
     getData(res.data.token).then(response => {
       user = response;
-      dispatch({ type: LOGIN_SUCCESS, payload: user });
+      dispatch({ type: SIGNUP_SUCCESS, payload: user });
     });
   } catch (error) {
     dispatch({ type: SIGNUP_FAIL, payload: error.response.data.message });

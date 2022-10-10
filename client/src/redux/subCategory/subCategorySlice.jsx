@@ -23,6 +23,7 @@ const subCategorySlice = createSlice({
             state.items = [];
             state.loading = false;
         },
+
         FETCH_SUBCATEGORY_REQUEST(state) {
             state.item = {};
             state.loading = true;
