@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 
 //components
 import Card from "../../../ui/card";
+import Loading from "../../../ui/Loading";
 
 //redux
 import { getSubCategory } from "../../../../redux/subCategory/subCategoryAction";
@@ -32,7 +33,7 @@ function Product() {
         <div className="container">
             <div className="row">
                 {loading ? (
-                    <p style={{ textAlign: 'center' }}>Loading</p>
+                    <Loading />
                 ) : (
                     product
                 )}

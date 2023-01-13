@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 //components
 import Card from "../ui/card";
+import Loading from "../ui/Loading";
 
 //redux
 import { getCategories } from "../../redux/category/categoryAction";
@@ -27,7 +28,7 @@ function Category() {
         <div className="container">
             <div className="row">
                 {loading ? (
-                    <p style={{textAlign: 'center'}}>Loading</p>
+                    <Loading />
                 ) : (
                     categories
                 )}
