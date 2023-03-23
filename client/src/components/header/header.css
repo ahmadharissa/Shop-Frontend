@@ -91,7 +91,7 @@ ul {
         display: block;
         position: absolute;
         right: 2rem;
-        top: 1.3rem;
+        top: 40px;
     }
 
     .active {
